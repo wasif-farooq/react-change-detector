@@ -7,11 +7,12 @@ npm i react-change-detector --save
 
 ## How To Use
 To use this you need to import ChangeDetector component in you app like this
-
+```
 import React, { Component, createRef } from 'react';
 ... some code
 import { ChangeDetector } from 'react-change-detector';
 ... some code
+```
 
 ```
 class App extends Component {
