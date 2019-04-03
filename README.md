@@ -13,6 +13,7 @@ import React, { Component, createRef } from 'react';
 import { ChangeDetector } from 'react-change-detector';
 ... some code
 
+```
 class App extends Component {
     state = {
         test1: '1',
@@ -39,4 +40,4 @@ class App extends Component {
         </ChangeDetector>
     }
 }
-
+```
