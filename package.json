@@ -1,8 +1,8 @@
 {
   "name": "react-change-detector",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "This package enable you to use change detector in you react form or app only on the states you provide to it",
-  "main": "./dist/index.js",
+  "main": "./dist/bundle.js",
   "files": [
     "./dist"
   ],
