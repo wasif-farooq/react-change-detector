@@ -15,11 +15,16 @@ class ChangeDetector extends Component {
      */
     newValues = new Map()
 
+    constructor(props) {
+        super(props)
+        props.changeDetector(this)
+    }
+
     /**
      * @returns void
      */
     componentDidMount() {
-        const {children, ref, ...props} = this.props
+        const {children, changeDetector, ...props} = this.props
         let values = JSON.parse(JSON.stringify(props))
         for (let i in values) {
             this.oldValues.set(i, values[i])
@@ -33,7 +38,7 @@ class ChangeDetector extends Component {
      * @returns boolean
      */
     shouldComponentUpdate(nextProps, nextState) {
-        const {children, ref, ...props} = nextProps
+        const {children, changeDetector, ...props} = nextProps
         let values = JSON.parse(JSON.stringify(props))
         for (let i in values) {
             this.newValues.set(i, values[i])

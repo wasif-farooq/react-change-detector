@@ -19,14 +19,20 @@ class App extends Component {
     state = {
         test1: '1',
         test2: [2]
-        test3: {a : 1}
+        test3: {a : 1},
+        // you can name whatever you want
+        detector: null
+    }
+    
+    setDetector(detector) {
+        this.setState({detector: detector})
     }
 
     // for getting accesst its functions
     changeDetector = createRef()
 
     onClick = () => {
-        if (this.changeDetector.current.isChangeDetected()) {
+        if (this.state.detector.isChangeDetected()) {
             // code if change is detected
         }
     }
@@ -36,6 +42,7 @@ class App extends Component {
             test1={this.state.test1}
             test2={this.state.test2}
             test3={this.state.test3}
+            changeDetector={this.setDetector.bind(this)}
         >
         .. your form code or child components
         </ChangeDetector>

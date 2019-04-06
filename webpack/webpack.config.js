@@ -38,9 +38,15 @@ entry: './src/index.js',
       }
     ]
   },
+  resolve: {
+    extensions: ['*', '.js', '.jsx'],
+    alias: {
+      'react-change-detector': path.resolve(__dirname, '../src', 'index.js'),
+    },
+  },
   output: {
     path: path.join(__dirname, '../', '/dist'),
-    publicPath: '/react-form-elementor/',
+    publicPath: '/',
     filename: 'bundle.js',
   },
   plugins: []
