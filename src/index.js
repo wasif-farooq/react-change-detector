@@ -1,1 +1,1 @@
-export { ChangeDetector } from './ChangeDetector'
+export { ChangeDetector } from './ChangeDetector';

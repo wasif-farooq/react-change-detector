@@ -17,7 +17,7 @@ class ChangeDetector extends Component {
 
     constructor(props) {
         super(props)
-        props.changeDetector(this)
+        typeof props.changeDetector === 'function' ? props.changeDetector(this): false
     }
 
     /**
