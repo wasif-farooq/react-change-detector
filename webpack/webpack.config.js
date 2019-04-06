@@ -45,9 +45,9 @@ entry: './src/index.js',
     },
   },
   output: {
-    path: path.join(__dirname, '../', '/dist'),
+    path: path.join(__dirname, '../', '/lib'),
     publicPath: '/',
-    filename: 'bundle.js',
+    filename: 'index.js',
   },
   plugins: []
 };
